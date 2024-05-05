@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
   let ranNum = Math.floor((Math.random() * 100)) + 1
   // console.log(ranNum);
