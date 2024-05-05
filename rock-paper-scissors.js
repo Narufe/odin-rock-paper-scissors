@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice() {
   let ranNum = Math.floor((Math.random() * 100)) + 1
   // console.log(ranNum);
@@ -17,6 +14,8 @@ function getHumanChoice() {
   return(prompt("Please key in your choice", ""));
 }
 
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
@@ -42,18 +41,25 @@ function playRound(humanChoice, computerChoice) {
   } else {
       console.log("repeat");
   }
-
 }
 
+function playGame() {
+  for (let game = 1; game <= 5; game++) {
+    const humanSelection = getHumanChoice();
+    console.log(humanSelection);
+    const computerSelection = getComputerChoice();
+    console.log(computerSelection);
 
-const humanSelection = getHumanChoice();
-console.log(humanSelection);
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
+    playRound(humanSelection, computerSelection);
+  }
+}
 
+playGame();
+console.log("Your score - " + humanScore);
+console.log("Computer score - " + computerScore);
 
-playRound(humanSelection, computerSelection);
-
-
-
+if (humanScore > computerScore) 
+  console.log("You win!!");
+else
+  console.log("You lose :(");
 
