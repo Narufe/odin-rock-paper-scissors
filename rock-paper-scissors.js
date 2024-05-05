@@ -1,6 +1,6 @@
 function getComputerChoice() {
   let ranNum = Math.floor((Math.random() * 100)) + 1
-  console.log(ranNum);
+  // console.log(ranNum);
   if (ranNum >= 1 && ranNum <= 33) {
     return "Rock";
   } else if (ranNum >= 34 && ranNum <= 66) {
@@ -10,5 +10,13 @@ function getComputerChoice() {
   }
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+function getHumanChoice() {
+  return(prompt("Please key in your choice", ""));
+}
+
+console.log(getHumanChoice());
+
+
 
